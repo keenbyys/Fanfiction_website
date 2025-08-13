@@ -1,10 +1,5 @@
 /* GENERAL */
 
-@font-face {
-    font-family: ;
-    src: url();
-}
-
 html {
     min-width: 1280px;
 }
@@ -14,6 +9,7 @@ body, div, p, h1, h2, nav, li, ul, button, a {
     padding: 0px;
     text-decoration: none;
     list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -27,7 +23,7 @@ a {
 }
 
 header {
-    height: 4rem;
+    height: 5rem;
     padding: 0rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -38,7 +34,6 @@ header {
     box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.2);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-
     font-size: 21px;
 }
 
@@ -69,8 +64,21 @@ li {
 /* details */
 
 .div__block_buttons {
+    position: relative;
     width: 100%;
-    height: 15rem;
+    height: 10rem;
+    cursor: pointer;
+}
+
+.div__button {
+    width: 100%;
+    height: 5rem;
+    margin: 1rem;
+    text-align: center;
+    align-content: center;
+    background-color: white;
+    box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.4rem;
 }
 
 .chapter-text {
