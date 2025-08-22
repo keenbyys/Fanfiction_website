@@ -8,7 +8,7 @@
 /* GENERAL */
 
 html {
-    min-width: 1300px;
+    min-width: 1200px;
 }
 
 body {
@@ -83,10 +83,8 @@ li {
 .div__container_buttons {
     height: var(--height-title);
     overflow: hidden;
-    /*background: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.7));*/
-    background-color: antiquewhite;
+    background-color: rgb(250, 235, 215);
 }
-
 
 .div__back_text {
     height: var(--height-title);
@@ -94,11 +92,15 @@ li {
     font-size: 5vh;
     opacity: 30%;
     text-align: justify;
-    filter: blur(.6vh);
+    filter: blur(.8vh);
     overflow: hidden;
+    min-width: 1200px;
+    z-index: 0;
 }
 
 .p__move_title_text {
+    user-select: none;
+    cursor: default;
     animation: move_title_text 20s linear infinite alternate;
 }
 
@@ -129,7 +131,7 @@ li {
     background-color: var(--base-bg-color-00);
     box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 0.4rem;
-    z-index: 1;
+    z-index: 2;
 }
 
 .chapter-text {
