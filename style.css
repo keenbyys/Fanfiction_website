@@ -3,6 +3,9 @@
     --base-bg-color-01: antiquewhite;
     --base-text-color-00: rgb(70, 59, 46);
     --base-text-color-01: rgb(43, 43, 43);
+    --base-text-color-02: white;
+
+    --text-color-jdh: #B45518;
 
     --height-title: 94vh;
 }
@@ -14,6 +17,7 @@ html {
 }
 
 body {
+    position: relative;
     overflow: auto;
 }
 
@@ -95,14 +99,22 @@ li {
 }
 
 /* DETAILS /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 .div__container_buttons {
     height: var(--height-title);
     overflow: hidden;
-    background-color: rgb(250, 235, 215);
+    background: linear-gradient(var(--angle), rgb(167, 199, 231), rgb(250, 200, 152));
+    animation: 15s spin linear infinite;
 }
 
-.backgradient {
-    background: linear-gradient(to bottom, transparent, rgb(255, 251, 0));
+@keyframes spin {
+    from {--angle: 0deg}
+    to{--angle: 360deg}
 }
 
 .div__back_text {
@@ -159,22 +171,33 @@ li {
     margin: 1rem;
     padding: 1rem 8rem;
     box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
-    /* background-color: var(--base-bg-color-00); */
-    border-color: rgb(226, 203, 175);
-    border-style: solid;
+    background-color: var(--base-bg-color-00);
+    /* border-color: rgb(226, 203, 175); */
+    /* border-style: solid; */
     backdrop-filter: blur(1.5vh);
     border-radius: 1rem;
     z-index: 2;
 }
 
+.span__jdh_color, .span__lo_color {
+    color: var(--base-text-color-01);
+    transition: .2s;
+}
+
+.span__jdh_color:hover {
+    user-select: none;
+    color: var(--text-color-jdh);
+    
+}
+
 .div__description h1 {
-    color: var(--base-text-color-00);
+    color: var(--base-text-color-01);
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 .div__description p {
-    color: var(--base-text-color-00);
+    color: var(--base-text-color-01);
     font-size: 1.2rem;
 }
 
@@ -194,7 +217,7 @@ li {
     border-color: var(--base-bg-color-00);
     border-style: solid;
     box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
-    border-radius: 0.4rem;
+    border-radius: 0.5rem;
     z-index: 2;
     transition: 0.3s;
 }
@@ -210,14 +233,14 @@ li {
     /* background-color: var(--base-bg-color-01); */
     background-color: transparent;
     backdrop-filter: blur(1.5vh);
-    border-color: rgb(226, 203, 175);
+    border-color: rgba(255, 255, 255, 0.5);
     border-style: solid;
     width: 100%;
 }
 
 .div__button_chapters:hover h1,
 .div__button_Extra_chapters:hover h1 {
-    color: var(--base-text-color-00);
+    color: var(--base-text-color-02);
 }
 
 .div__button_chapters:hover~.div__button_Extra_chapters {
@@ -229,6 +252,7 @@ li {
     filter: blur(.2vh);
     opacity: 0.4;
 }
+
 
 .chapter-text {
     font-size: 25px;
