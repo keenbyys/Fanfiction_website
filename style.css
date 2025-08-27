@@ -105,7 +105,7 @@ li {
     transform: translateY(-100%);
     position: absolute;
     top: 0;
-    width: 182vh;
+    width: 190vh;
     height: 100%;
     z-index: 1001;
     animation: identifier .5s ease-in-out;
