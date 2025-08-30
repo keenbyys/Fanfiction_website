@@ -120,6 +120,10 @@ li {
     }
 }
 
+.svg__logo {
+    height: 80%;
+}
+
 @property --angle{
     syntax: "<angle>";
     initial-value: 0deg;
