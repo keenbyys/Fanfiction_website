@@ -15,6 +15,7 @@
 
 html {
     min-width: 1200px;
+    min-height: 700px;
 }
 
 body {
@@ -36,7 +37,7 @@ ul,
 button,
 a {
     margin: 0px;
-    padding: 0px;
+    padding: 0rem;
     text-decoration: none;
     list-style-type: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -95,11 +96,9 @@ footer {
     text-align: center;
 }
 
-li {
-    margin: 0 1rem;
-}
-
 /* DETAILS /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* LOAD_ANIM ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 .load_anim::before {
     content: '';
     background-color:  var(--base-bg-color-00);
@@ -120,6 +119,8 @@ li {
         transform: translateY(-100%);
     }
 }
+
+/* LOGO HEADER /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .a__logo, .img__logo_img, .div__logo {
     position: relative;
@@ -143,6 +144,26 @@ li {
     transform: translateX(-100%);
     opacity: 1;
     transition: .5s;
+}
+
+/* NAVBAR ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.ul__navbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: all .3s;
+}
+
+.ul__navbar li {
+    transition: all .3s;
+}
+
+.ul__navbar li:hover {
+    filter: invert(1);
+    background-color: var(--base-bg-color-00);
+    padding: .7rem;
+    border-radius: .6rem;
 }
 
 @property --angle{
@@ -313,15 +334,12 @@ li {
     text-align: justify;
 }
 
-.ul__navbar {
-    display: flex;
-    align-items: center;
-}
-
 .div__newchapters {
     display: flex;
+    gap: 2rem;
 }
 
 .div__blocknewchapter {
     width: 34%;
+    padding: 1rem;
 }
