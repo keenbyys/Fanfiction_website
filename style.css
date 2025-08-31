@@ -72,6 +72,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 0rem 2rem;
+    overflow: hidden;
 }
 
 .cursor_pointer {
@@ -120,8 +121,28 @@ li {
     }
 }
 
-.svg__logo {
-    height: 80%;
+.a__logo, .img__logo_img, .div__logo {
+    position: relative;
+    display: block;
+    align-content: center;
+    height: 90%;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.div__logo_text {
+    position: absolute;
+    user-select: none;
+    width: 250px;
+    transform: translateX(35%);
+    overflow: hidden;
+}
+
+.h1__logo_text {
+    font-size: 30px;
+    transform: translateX(-100%);
+    opacity: 1;
+    transition: .5s;
 }
 
 @property --angle{
@@ -209,12 +230,12 @@ li {
     transition: .2s;
 }
 
-.span__jdh_color:hover {
+.span__jdh_color:hover, .span__jdh_color_logo {
     user-select: none;
     color: var(--text-color-jdh);
 }
 
-.span__lo_color:hover {
+.span__lo_color:hover, .span__lo_color_logo {
     user-select: none;
     color: var(--text-color-lo);
 }
