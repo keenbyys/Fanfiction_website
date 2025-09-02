@@ -9,6 +9,7 @@
     --text-color-lo: #425C90;
 
     --height-title: 94vh;
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
 }
 
 /* GENERAL */
@@ -58,7 +59,7 @@ header {
     position: sticky;
     top: 0px;
     background-color: var(--base-bg-color-00);
-    box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0rem 0rem 1rem var(--box-shadow-color);
     /*
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -96,8 +97,10 @@ footer {
     text-align: center;
 }
 
+
 /* DETAILS /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* LOAD_ANIM ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 
 .load_anim::after {
     content: '';
@@ -120,7 +123,9 @@ footer {
     }
 }
 
+
 /* LOGO HEADER /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 
 .img__logo_img, .div__logo {
     position: relative;
@@ -130,15 +135,6 @@ footer {
     cursor: pointer;
     transition: .2s;
 }
-
-/* .img__logo_img::after {
-    content: "";
-    background: url("media/logo/геї_3.png");
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 0;
-} */
 
 .div__logo_text {
     position: absolute;
@@ -179,6 +175,8 @@ footer {
     padding: .7rem;
     border-radius: .6rem;
 }
+
+/* TITLE //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 @property --angle{
     syntax: "<angle>";
@@ -343,17 +341,27 @@ footer {
 }
 
 
+
 .chapter-text {
     font-size: 25px;
     text-align: justify;
 }
 
+
+
 .div__newchapters {
-    display: flex;
+    display: grid;
     gap: 2rem;
 }
 
 .div__blocknewchapter {
     width: 34%;
     padding: 1rem;
+    box-shadow: 0rem 0rem 1rem var(--box-shadow-color);
+    border-radius: 1rem;
+}
+
+.div__blocknewchapter h1 {
+    height: 5rem;
+    align-content: end;
 }
