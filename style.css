@@ -434,6 +434,8 @@ footer {
     }
 
     .div__description p {
+        text-align: justify;
+        padding: 0% 5%;
         font-size: 15px;
     }
 
