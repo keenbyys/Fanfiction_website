@@ -98,13 +98,12 @@ footer {
 }
 
 
-/* DETAILS /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* LOAD_ANIM ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
 .load_anim::after {
     content: '';
-    background-color:  var(--base-bg-color-00);
+    background-color: var(--base-bg-color-00);
     transform: translateY(-100%);
     position: absolute;
     top: 0;
@@ -118,6 +117,7 @@ footer {
     0% {
         transform: translateY(0%);
     }
+
     100% {
         transform: translateY(-100%);
     }
@@ -127,7 +127,8 @@ footer {
 /* LOGO HEADER /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
-.img__logo_img, .div__logo {
+.img__logo_img,
+.div__logo {
     position: relative;
     display: block;
     align-content: center;
@@ -178,7 +179,7 @@ footer {
 
 /* TITLE //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-@property --angle{
+@property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
@@ -192,8 +193,13 @@ footer {
 }
 
 @keyframes spin {
-    from {--angle: 0deg}
-    to{--angle: 360deg}
+    from {
+        --angle: 0deg
+    }
+
+    to {
+        --angle: 360deg
+    }
 }
 
 .div__back_text {
@@ -258,17 +264,20 @@ footer {
     z-index: 2;
 }
 
-.span__jdh_color, .span__lo_color {
+.span__jdh_color,
+.span__lo_color {
     color: var(--base-text-color-01);
     transition: .2s;
 }
 
-.span__jdh_color:hover, .span__jdh_color_logo {
+.span__jdh_color:hover,
+.span__jdh_color_logo {
     user-select: none;
     color: var(--text-color-jdh);
 }
 
-.span__lo_color:hover, .span__lo_color_logo {
+.span__lo_color:hover,
+.span__lo_color_logo {
     user-select: none;
     color: var(--text-color-lo);
 }
@@ -293,7 +302,8 @@ footer {
 
 .div__button_chapters,
 .div__button_Extra_chapters {
-    width: 50%;
+    /* width: 50%; */
+    width: 100%;
     height: 8rem;
     margin: 1rem;
     display: block;
@@ -348,9 +358,8 @@ footer {
 }
 
 
-
 .div__newchapters {
-    display: grid;
+    display: flex;
     gap: 2rem;
 }
 
@@ -364,4 +373,86 @@ footer {
 .div__blocknewchapter h1 {
     height: 5rem;
     align-content: end;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 600px) {
+    html {
+        min-width: 320px;
+    }
+
+    .div__newchapters {
+        flex-wrap: wrap;
+    }
+
+    .div__blocknewchapter {
+        width: 5rem;
+        padding: 1rem;
+        box-shadow: 0rem 0rem 1rem var(--box-shadow-color);
+        border-radius: 1rem;
+    }
+
+    .sidepage-margin {
+        margin: 0% 0%;
+    }
+
+    .img__logo_img,
+    .div__logo,
+    .h1__logo_text {
+        display: none;
+    }
+
+    header {
+        position: relative;
+        font-size: 20px;
+    }
+
+    .header__container {
+        height: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 0rem 2rem;
+        overflow: hidden;
+    }
+
+    .div__back_text {
+        height: var(--height-title);
+        position: absolute;
+        font-size: 5vh;
+        opacity: 0.2;
+        text-align: justify;
+        filter: blur(0.8vh);
+        overflow: hidden;
+        min-width: 320px;
+        z-index: 0;
+    }
+
+    .div__description {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        text-align: center;
+        align-content: center;
+        margin: 1rem;
+        padding: 1rem 8rem;
+        box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
+        background-color: var(--base-bg-color-00);
+        /* border-color: rgb(226, 203, 175); */
+        /* border-style: solid; */
+        backdrop-filter: blur(1.5vh);
+        border-radius: 1rem;
+        z-index: 2;
+    }
+
+    .div__description h1 {
+        font-size: 2px;
+    }
+
+    .div__description p {
+        font-size: 2px;
+    }
 }
