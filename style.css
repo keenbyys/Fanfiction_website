@@ -409,11 +409,15 @@ footer {
     .sidepage-margin {
         margin: 0% 0%;
     }
-
+    
     .img__logo_img,
     .div__logo,
     .h1__logo_text {
-        display: none;
+        height: 50px;
+    }
+
+    .div__logo_text {
+        visibility: hidden;
     }
 
     header {
@@ -425,7 +429,7 @@ footer {
         height: 100%;
         align-items: center;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         padding: 0rem 2rem;
         overflow: hidden;
     }
