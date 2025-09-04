@@ -33,6 +33,8 @@ div,
 p,
 h1,
 h2,
+h5,
+h6,
 nav,
 li,
 ul,
@@ -363,18 +365,22 @@ footer {
 
 .div__newchapters {
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    /* grid-template-columns: calc(96%/3) calc(96%/3) calc(96%/3); */
+    gap: 2%;
+    margin: 3% 0;
 }
 
 .div__blocknewchapter {
-    width: 34%;
-    padding: 1rem;
+    width: calc((100% - 16%) / 3);
+    padding: 2%;
+    margin: 1% 0%;
     box-shadow: 0rem 0rem 1rem var(--box-shadow-color);
     border-radius: 1rem;
 }
 
 .div__blocknewchapter h1 {
-    height: 5rem;
+    /* height: 5rem; */
     align-content: end;
 }
 
@@ -388,11 +394,12 @@ footer {
     }
 
     .div__newchapters {
-        flex-wrap: wrap;
-    }
+    display: flex;
+    gap: 2%;
+}
 
     .div__blocknewchapter {
-        width: 5rem;
+        width: 100%;
         padding: 1rem;
         box-shadow: 0rem 0rem 1rem var(--box-shadow-color);
         border-radius: 1rem;
@@ -441,7 +448,7 @@ footer {
     .div__description p {
         text-align: justify;
         padding: 0% 5%;
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .div__button_chapters {
@@ -452,6 +459,6 @@ footer {
 
     .indent p {
         font-size: 20px;
-        margin: 0% 7%;
+        margin: 1% 7%;
     }
 }
