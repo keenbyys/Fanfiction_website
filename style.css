@@ -445,6 +445,8 @@ footer {
     }
 
     .div__button_chapters {
+        margin-top: 0%;
         font-size: 15px;
+        height: 5rem;
     }
 }
