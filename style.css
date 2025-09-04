@@ -1,6 +1,7 @@
 :root {
     --base-bg-color-00: white;
     --base-bg-color-01: antiquewhite;
+    --base-bg-color-02: rgb(233, 233, 233);
     --base-text-color-00: rgb(70, 59, 46);
     --base-text-color-01: rgb(43, 43, 43);
     --base-text-color-02: white;
@@ -167,6 +168,10 @@ footer {
     padding: .7rem;
     border-radius: .6rem;
     transition: all .3s;
+}
+
+.li__on a {
+    background-color: var(--base-bg-color-02);
 }
 
 .ul__navbar a:hover {
