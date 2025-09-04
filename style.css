@@ -400,7 +400,8 @@ footer {
 
     .div__blocknewchapter {
         width: 100%;
-        padding: 1rem;
+        padding: 5%;
+        margin: 3% 5%;
         box-shadow: 0rem 0rem 1rem var(--box-shadow-color);
         border-radius: 1rem;
     }
