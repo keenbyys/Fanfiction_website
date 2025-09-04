@@ -436,4 +436,8 @@ footer {
     .div__description p {
         font-size: 15px;
     }
+
+    .div__button_chapters {
+        font-size: 15px;
+    }
 }
