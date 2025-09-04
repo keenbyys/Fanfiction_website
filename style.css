@@ -449,4 +449,9 @@ footer {
         font-size: 15px;
         height: 5rem;
     }
+
+    .indent p {
+        font-size: 20px;
+        margin: 0% 7%;
+    }
 }
