@@ -254,11 +254,9 @@ footer {
     text-align: center;
     align-content: center;
     margin: 1rem;
-    padding: 1rem 8rem;
+    padding: 2% 10%;
     box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
     background-color: var(--base-bg-color-00);
-    /* border-color: rgb(226, 203, 175); */
-    /* border-style: solid; */
     backdrop-filter: blur(1.5vh);
     border-radius: 1rem;
     z-index: 2;
@@ -431,28 +429,11 @@ footer {
         z-index: 0;
     }
 
-    .div__description {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        text-align: center;
-        align-content: center;
-        margin: 1rem;
-        padding: 1rem 8rem;
-        box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
-        background-color: var(--base-bg-color-00);
-        /* border-color: rgb(226, 203, 175); */
-        /* border-style: solid; */
-        backdrop-filter: blur(1.5vh);
-        border-radius: 1rem;
-        z-index: 2;
-    }
-
     .div__description h1 {
-        font-size: 2px;
+        font-size: 30px;
     }
 
     .div__description p {
-        font-size: 2px;
+        font-size: 15px;
     }
 }
